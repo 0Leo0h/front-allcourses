@@ -1,0 +1,54 @@
+<div class="container p-3" style="background-color: #5784a5;margin-top: 5%;">
+    <div class="card">
+        <div class="card-header"><h1>SOLICITUD DE TUTOR {{tutor?.id}}</h1></div>
+        <div class="card-body" style="background-color: #a7d1f0;">
+            <h3>
+                Nombre:
+                <small class="text-muted">{{tutor?.nombres}}</small>
+            </h3>
+            <h3>
+                Apellido:
+                <small class="text-muted">{{tutor?.apellidos}}</small>
+            </h3>
+            <h3>
+                Documento:
+                <small class="text-muted">{{tutor?.tipo_doc}}-{{tutor?.num_doc}}</small>
+            </h3>
+            <h3>
+                Celular:
+                <small class="text-muted">{{tutor?.celular}}</small>
+            </h3>
+            <h3>
+                Direccion:
+                <small class="text-muted">{{tutor?.direccion}}</small>
+            </h3>
+            <h3>
+                Pais:
+                <small class="text-muted">{{tutor?.pais}}</small>
+            </h3>
+            <h3>
+                Ciudad:
+                <small class="text-muted">{{tutor?.ciudad}}</small>
+            </h3>
+            <h3>
+                Correo:
+                <small class="text-muted">{{tutor?.correo}}</small>
+            </h3>
+            <h3>
+                Especialidad:
+                <small class="text-muted">{{tutor?.especialidad}}</small>
+            </h3>
+            <h3>
+                Disponibilidad:
+                <small class="text-muted">{{tutor?.disponibilidad}}</small>
+            </h3>
+            <h3>
+                Descripcion:
+                <small class="text-muted">{{tutor?.descripcion}}</small>
+            </h3>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success mt-3" (click)="Aceptar()">ACEPTAR</button>
+              </div>
+        </div>
+    </div>
+</div>

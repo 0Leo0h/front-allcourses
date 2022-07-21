@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row cuadro">
+        <div class="pt-3" *ngIf="peticiones?.length==0">
+            <table class="table table-bordered border-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha deseada</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4"><div class="text-center"><i class="fa-solid fa-box-archive"></i>Sin peticiones</div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pt-3" *ngFor="let item of peticiones">
+            <table class="table table-bordered border-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha deseada</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{item.fecha_deseada}}</td>
+                        <td>{{item.hora}}</td>
+                        <td>{{item.descripcion}}</td>
+                        <td><button type="button" class="btn btn-primary" (click)="responderPeticion(item.id,item.id_user,2)">Aceptar</button> 
+                            <button class="btn btn-danger" (click)="responderPeticion(item.id,item.id_user,0)"> Rechazar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

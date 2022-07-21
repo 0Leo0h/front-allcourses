@@ -1,0 +1,75 @@
+<div class="cuadro d-flex justify-content-center align-items-center flex-column rounded-3">
+    <div class="titulo text-star">
+        <h1 class="t texto text-center">Formulario de petición</h1>
+    </div>
+    <form [formGroup]="form" class="row g-3">
+        <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">Nombres</label>
+            <input type="text" class="form-control" id="validationDefault01" formControlName="nombres" required />
+        </div>
+
+        <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="validationDefault02" formControlName="apellidos" required />
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault04" class="form-label">Tipo de documento</label>
+            <select class="form-select" id="validationDefault04" formControlName="tipo_doc" required>
+                <option selected>Tipo doc</option>
+                <option>C.C</option>
+                <option>T.I</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault05" class="form-label">Documento</label>
+            <input type="number" class="form-control" id="validationDefault05" formControlName="num_doc" required />
+        </div>
+
+        <div class="col-md-3">
+            <label for="validationDefault05" class="form-label">Fecha</label>
+            <input type="date" class="form-control" id="validationDefault06" formControlName="fecha_nacimiento" required />
+        </div>
+        <div class="col-md-3">
+            <label for="validationDefault05" class="form-label">Telefono</label>
+            <input type="number" class="form-control" id="validationDefault07" formControlName="celular" required />
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefaultUsername" class="form-label">Email</label>
+            <div class="pas input-group">
+                <input type="email" class="form-control" id="validationDefaultUsername"
+                    aria-describedby="inputGroupPrepend2" formControlName="correo" required />
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="validationDefault03" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="validationDefault09" formControlName="direccion" required />
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault03" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" id="validationDefault03" formControlName="ciudad" required />
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault03" class="form-label">País</label>
+            <input type="text" class="form-control" id="validationDefault10" formControlName="pais" required />
+        </div>
+
+        <div class="col-sm-3">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="text" class="form-control" aria-describedby="basic-addon1" formControlName="username" />
+        </div>
+        <div class="col-sm-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" formControlName="contraseña" />
+        </div>
+
+        <div class="p-2 bd-highlight d-flex justify-content-center">
+            <button class="btn border-radius-sm" style="background-color: #ffab91"
+                                (click)="onRegister()">¡Registrate!</button>
+        </div>
+        <div class="p-1 bd-highlight d-flex justify-content-center">
+            <p>Si ya tiene una cuenta en el inicio pulse aquí <a href="/auth/login">Iniciar sesion</a>
+            </p>
+        </div>
+    </form>
+</div>

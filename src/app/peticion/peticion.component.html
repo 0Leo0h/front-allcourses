@@ -1,0 +1,28 @@
+<div class="container p-3">
+    <div class="cuadro">
+        <div class="card">
+            <div class="card-header">
+                <h4>Formulario de petición</h4>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="enviar()" class="row g-3">
+                    <div class="col-md-6 mb-3">
+                        <span class="input-group-text" id="basic-addon1">Fecha deseada</span>
+                        <input type="date" value="2019-08-19" class="form-control" formControlName="fecha_deseada">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <span class="input-group-text" id="basic-addon1">Hora deseada</span>
+                        <input type="time" class="form-control" formControlName="hora">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Descripcion</span>
+                        <textarea class="form-control" formControlName="descripcion"></textarea>
+                    </div>
+
+                    <button class="btn btn-success offset-md-5" style="background-color: #ffab91;color:black;width: 200px;"
+                        type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

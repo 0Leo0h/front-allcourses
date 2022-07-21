@@ -1,0 +1,72 @@
+<div class="cuadro d-flex justify-content-center align-items-center flex-column rounded-3">
+    <div class="titulo text-star">
+        <h1 class="t texto text-center">Formulario de registro</h1>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="guardar()" class="row g-3">
+        <div class="col-md-4">
+            <label for="validationDefault01" class="form-label" id="basic-addon1">Nombres</label>
+            <input type="text" class="form-control" id="validationDefault01" formControlName="nombres" required />
+        </div>
+
+        <div class="col-md-4">
+            <label for="validationDefault02" class="form-label"id="basic-addon1">Apellidos</label>
+            <input type="text" class="form-control" id="validationDefault02" formControlName="apellidos" required />
+        </div>
+        <div class="col-md-5">
+            <label for="validationDefault04" class="form-label">Tipo de documento</label>
+            <select class="form-select" id="validationDefault04"  formControlName="tipo_doc" required>
+                <option selected>Tipo doc</option>
+                <option>C.C</option>
+                <option>T.I</option>
+            </select>
+        </div>
+        <div class="col-md-5">
+            <label for="validationDefault05" class="form-label">Documento</label>
+            <input type="number" class="form-control" id="validationDefault05" formControlName="num_doc" required />
+        </div>
+
+        <div class="col-md-3">
+            <label for="validationDefault05" class="form-label">Fecha</label>
+            <input type="date" class="form-control" id="validationDefault06" formControlName="fecha_nacimiento" required />
+        </div>
+        <div class="col-md-3">
+            <label for="validationDefault05" class="form-label">Telefono</label>
+            <input type="number" class="form-control" id="validationDefault07" formControlName="celular" required />
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefaultUsername" class="form-label">Email</label>
+            <div class="pas input-group">
+                <input type="email" class="form-control" id="validationDefaultUsername"
+                    aria-describedby="inputGroupPrepend2" formControlName="correo" required />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="validationDefault09" formControlName="direccion" required />
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" id="validationDefault03" formControlName="ciudad" required />
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">País</label>
+            <input type="text" class="form-control" id="validationDefault10" formControlName="pais" required />
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">Especialidad</label>
+            <input type="text" class="form-control" id="validationDefault1" formControlName="especialidad" required />
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">Disponibilidad</label>
+            <textarea type="text" class="form-control" id="validationDefault11" formControlName="disponibilidad" required></textarea>
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label h-400">Descripción</label>
+            <textarea type="text" class="form-control" id="validationDefault12" formControlName="descripcion" required></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn btn-primary">Registrarse</button>
+        </div>
+    </form>
+</div>

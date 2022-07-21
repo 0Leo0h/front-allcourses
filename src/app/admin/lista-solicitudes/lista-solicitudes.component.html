@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row cuadro">
+        <div class="pt-3" *ngIf="solicitudes?.length==0">
+            <table class="table table-bordered border-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Especialidad</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="3"><div class="text-center"><i class="fa-solid fa-box-archive"></i> Sin solicitudes</div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pt-3" *ngFor="let item of solicitudes">
+            <table class="table table-bordered border-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Especialidad</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{item.especialidad}}</td>
+                        <td>{{item.descripcion}}</td>
+                        <td><button class="btn btn-info" routerLink='/admin/detalles/{{item}}'> Detalles</button><button class="btn btn-success mt-3" (click)="aceptar(item)">
+                                Aceptar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

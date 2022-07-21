@@ -1,0 +1,78 @@
+<div class="container" style="background: linear-gradient(rgb(239, 154, 154, 0.8), rgb(245, 210, 180, 0.8));">
+    <nav class="navbar navbar-expand-lg bg-light" style="background: linear-gradient(rgb(239, 154, 154, 0.8), rgb(245, 210, 180, 0.8));">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AllCourse</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <a class="navbar-brand" href="/auth/login">
+                    <button class="btn btn-primary navbar-brand" *ngIf="!session">Login</button></a>
+                <a class="navbar-brand" href="/auth/login/register" *ngIf="!session">Registrarse</a>
+                <button class="btn btn-primary navbar-brand" *ngIf="session" (click)="Logout()">Cerrar sesion</button>
+                <!-- <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Opciones
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/auth/login">Login</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+    <div class="offset-md-1">
+        <div style="padding-top: 20px;">
+            <h1>Conoce a nuestros tutores</h1>
+            <div style="display: flex;">
+                <p>Quieres unirte y dar tutorias?</p>
+                <div class="offset-md-7">
+                    <button type="button" class="btn btn-success" style="min-width: 200px;"
+                        routerLink="/registerT">Unirte</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body vimeo_video">
+            <youtube-player [videoId]="id" [height]="450" [width]="1000"></youtube-player>
+        </div>
+    </div>
+    <hr>
+    <!-- <div class="p-3" style="display: flex;">
+        <div class="offset-md-2 col-md-3 position-relative">
+            <input type="text" class="form-control rounded border" placeholder="Search...">
+            <i class="bx bx-search search-icon"></i>
+        </div>
+        <div class="offset-md-2 col-md-3 position-relative">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Selecciones una categoria</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col-md-6 p-3" *ngFor="let item of Tutores">
+            <div class="card mb-3 p-2 offset-md-1" style="max-width: 540px; border: 0 !important;box-shadow: 0 4px 6px -1px rgba(0,0,0,1), 0 2px 4px -1px rgba(0,0,0,0.06);">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../../assets/perfil.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.nombres + item.apellidos}}</h5>
+                            <p class="card-text">{{item.disponibilidad}}</p>
+                            <p class="card-text"><small class="text-muted">{{item.especialidad}}</small></p>
+                            <button class="btn btn-success offset-md-3" routerLink="/peticion/{{item.id}}">Petición</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

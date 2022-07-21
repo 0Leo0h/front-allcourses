@@ -1,0 +1,22 @@
+<div class="cuadro d-flex justify-content-center align-items-center flex-column rounded-3">
+    <div class="titulo text-star pb-3">
+        <h1 class="texto text-center">Ingresar</h1>
+    </div>
+    <form class="formulario pt-3" [formGroup]="form" novalidate>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="text" class="form-control" aria-describedby="basic-addon1" formControlName="Usuario" />
+            <div id="usserlHelp" class="form-text">
+                No compartas tu nombre de usuario con otra persona.
+            </div>
+        </div>
+        <div class="mb-3 pb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" formControlName="Contraseña" />
+        </div>
+        <button class="btn border-radius-sm" style="background-color: #ffab91" (click)="onlogin()">¡Iniciar
+            sesión!</button>
+        <a href="/auth/login/register" class="btn border-radius-sm" style="background-color: #ffab91; margin-left: 20px;"
+            target="_blank">Registrarse</a>
+    </form>
+</div>
